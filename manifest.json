@@ -6,7 +6,7 @@
 
   "start_url": "https://pomrtest.github.io/home", 
 
-  "display": "standalone", 
+  "display": "fullscreen", 
 
   "icons": [{ 
 
