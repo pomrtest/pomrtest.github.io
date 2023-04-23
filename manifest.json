@@ -5,6 +5,8 @@
   "short_name": "POMR", 
 
   "start_url": "https://pomrtest.github.io/home", 
+  
+  "categories": ["entertainment"]
 
   "display": "fullscreen", 
 
