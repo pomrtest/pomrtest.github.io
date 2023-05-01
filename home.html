@@ -144,6 +144,16 @@
         div.title a{
             padding: 50%;
         }
+        
+        div#sidebar{
+            background-color: var(--primary-color);
+            width: 25%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            color: var(--default-text);
+        }
     </style>
 
     <script>
@@ -161,8 +171,10 @@
     </script>
 
     <body>
+        
         <h1>Welcome Back!</h1>
         <h2>Favorited</h2>
+        <div id="sidebar">
         <div id="movielist">
             <div class="title"> <a href="./movies/A_Good_Title"> </a> </div>
             <div class="title"></div>
