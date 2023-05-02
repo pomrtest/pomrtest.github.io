@@ -4,5 +4,6 @@
     "email_notifications":
     {"on": false,
     "email": ""
-    }
+    },
+    "splash": true,
 }
