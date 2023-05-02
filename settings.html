@@ -154,6 +154,17 @@
             top: 0px;
             position: fixed;
             color: var(--default-text);
+
+            animation-name: sideslide;
+
+            animation-duration: 0.6s;
+            animation-delay: 0.6s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes sideslide{
+            from{left: -50%}
+            to{left: 0%}
         }
         
         div#sidebar a{
