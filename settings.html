@@ -96,9 +96,11 @@
         @keyframes splashAppearMainSettingsPage{
             from{
                 padding-left: 0%;
+                background-color: #000000;
             }
             to{
-                padding-left: 30px;
+                background-color: var(--bg);
+                padding-left: 25%;
             }
         }
 
@@ -162,7 +164,7 @@
         
         div#sidebar{
             background-color: var(--primary-color);
-            width: 30px;
+            width: 25%;
             height: 100%;
             left: 0px;
             top: 0px;
@@ -198,7 +200,7 @@
         }
 
         @keyframes sideslide{
-            from{left: -30px; filter: blur(10px);}
+            from{width: 25%; filter: blur(10px);}
             to{left: 0%; filter: blur(0px);}
         }
         
