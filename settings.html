@@ -35,13 +35,14 @@
         }
 
         body{
-            padding-left: 25%;
+            padding-left: 30px;
             background-color: var(--bg);
             margin: 10px;
             animation-name: splashAppearMainSettingsPage;
             animation-duration: 0.6s;
             animation-delay: 0.6s;
             animation-fill-mode: backwards;
+            
         }
 
         h0{
@@ -97,7 +98,7 @@
                 padding-left: 0%;
             }
             to{
-                padding-left: 25%;
+                padding-left: 30px;
             }
         }
 
@@ -161,18 +162,39 @@
         
         div#sidebar{
             background-color: var(--primary-color);
-            width: 25%;
+            width: 30px;
             height: 100%;
             left: 0px;
             top: 0px;
             position: fixed;
             color: var(--default-text);
+            overflow: scroll;
 
             animation-name: sideslide;
 
             animation-duration: 0.6s;
             animation-delay: 0.6s;
             animation-fill-mode: backwards;
+            transition-duration: 0.5s;
+        }
+
+        div#sidebar:hover{
+            background-color: var(--primary-color);
+            width: 25%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            position: fixed;
+            color: var(--primary-color);
+            overflow: scroll;
+
+            animation-name: sideslide;
+
+            animation-duration: 0.6s;
+            animation-delay: 0.6s;
+            animation-fill-mode: backwards;
+
+            transition-duration: 0.5s;
         }
 
         @keyframes sideslide{
@@ -195,6 +217,7 @@
             border-radius: 1000px;
             transition: 0.2s;
         }
+    
     </style>
 
     <body>
