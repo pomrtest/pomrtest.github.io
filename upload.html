@@ -36,12 +36,15 @@
         body{
             background-color: var(--bg);
             margin: 10px;
-            animation-name: splashAppearMainPage;
+            animation-name: fadeIn;
             animation-duration: 0.6s;
             animation-delay: 0.6s;
             animation-fill-mode: backwards;
 
-            ;
+            width: 80%;
+            height: 80%;
+            min-width: 100px;
+            min-height: 40px;
             
         }
 
@@ -90,6 +93,17 @@
             to{
                 background-color: var(--bg);
                 margin: 5px;
+            }
+        }
+
+        @keyframes fadeIn{
+            from{
+                background-color: #00000000;
+                filter: blur(20px);
+            }
+            to{
+                background-color: var(--bg);
+                filter: blur(0px);
             }
         }
 
@@ -221,7 +235,10 @@
     </style>
 
     <body>
-        <h1>Upload a file!</h1>
+        <center>
+            <h1>Upload a file!</h1>
+        </center>
+        
     </body>
 </head>
 </html>
