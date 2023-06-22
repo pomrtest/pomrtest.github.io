@@ -1,0 +1,227 @@
+<html>
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap" rel="stylesheet">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="POMR">
+    
+    <link rel="manifest" href="/manifest.json">
+
+    <title>POMR - Settings</title>
+
+    <style>
+        :root {
+            --pomr-gradient: linear-gradient(-50deg, #9656FF, #307DC4);
+            --default-text: #FFFFFF;
+            --bg: #171E35;
+            --primary-color: #5546AE;
+            --secondary-color: #FF6E00;
+        }
+        
+        *{
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+        }
+
+        html{
+           background-color: var(--primary-color);
+           background-image: var(--pomr-gradient);
+           background-repeat: no-repeat;
+        }
+
+        body{
+            background-color: var(--bg);
+            margin: 10px;
+            animation-name: splashAppearMainPage;
+            animation-duration: 0.6s;
+            animation-delay: 0.6s;
+            animation-fill-mode: backwards;
+
+            ;
+            
+        }
+
+        h0{
+            font-size: 100px;
+            font-weight: 900;
+        }
+
+        div#splash{
+            width: 50%;
+            height: 100%;
+
+            background-image: var(--pomr-gradient);
+            background-repeat: no-repeat;
+
+            text-align: center;
+            padding: 25%;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+
+            animation-name: splashFade;
+            animation-duration: 0.6s;
+            animation-delay: 0.4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes splashFade{
+            from{
+                opacity: 1;
+                filter: blur(0px);
+                background-position-y: 0px;
+            }
+            to{
+                opacity: 0;
+                filter: blur(10px);
+                background-position-y: 70rem;
+            }
+        }
+
+        @keyframes splashAppearMainPage{
+            from{
+                background-color: #000000;
+                margin: 10px;
+            }
+            to{
+                background-color: var(--bg);
+                margin: 5px;
+            }
+        }
+
+        @keyframes splashAppearMainSettingsPage{
+            from{
+                padding-left: 0%;
+            }
+            to{
+                padding-left: 25%;
+            }
+        }
+
+        .splashtitle{
+            color: #ffffff;
+        }
+
+        div#movielist{
+            overflow: scroll;
+            display: grid;
+            gap: 5px;
+            grid-column: 1;
+            grid-row: 7;
+            grid-template-columns: 302px 302px 302px 302px 302px 302px 302px;
+        }
+
+        h2{
+            font-weight: 400;
+        }
+
+        div.title{
+            width: 302px;
+            height: 188px;
+
+            background-color: var(--primary-color);
+            color: #ffffff00;
+
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        div.title:hover{
+            width: 302px;
+            height: 188px;
+
+            background-color: #d4e8ff;
+            color: #ffffff;
+
+            border-radius: 10px;
+
+            transform: scale(0.982,0.982);;
+            transition: 0.2s;
+        }
+
+        div.title:focus{
+            width: 302px;
+            height: 188px;
+
+            background-color: #d4e8ff;
+            color: #ffffffff;
+
+            border-radius: 10px;
+
+            transform: scale(1,1);
+            transition: 0.2s;
+        }
+
+        div.title a{
+            padding: 50%;
+        }
+        
+        div#sidebar{
+            background-color: var(--primary-color);
+            width: 25%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            position: fixed;
+            color: var(--default-text);
+            overflow: scroll;
+
+            animation-name: sideslide;
+
+            animation-duration: 0.6s;
+            animation-delay: 0.6s;
+            animation-fill-mode: backwards;
+            transition-duration: 0.5s;
+        }
+
+        div#sidebar:hover{
+            background-color: var(--primary-color);
+            width: 25%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            position: fixed;
+            color: var(--primary-color);
+            overflow: scroll;
+
+            animation-name: sideslide;
+
+            animation-duration: 0.6s;
+            animation-delay: 0.6s;
+            animation-fill-mode: backwards;
+
+            transition-duration: 0.5s;
+        }
+
+        @keyframes sideslide{
+            from{left: -25%; filter: blur(10px);}
+            to{left: 0%; filter: blur(0px);}
+        }
+        
+        div#sidebar a{
+            background-color: #ffffff00;
+            color: var(--default-text);
+            text-decoration: none;
+            border-radius: 1000px;
+            transition: 0.7s;
+        }
+        
+        div#sidebar a:hover{
+            background-color: var(--default-text);
+            color: var(--bg);
+            text-decoration: none;
+            border-radius: 1000px;
+            transition: 0.2s;
+        }
+    
+    </style>
+
+    <body>
+        <h1>Upload a file!</h1>
+    </body>
+</head>
+</html>
