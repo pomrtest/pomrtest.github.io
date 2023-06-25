@@ -1,12 +1,12 @@
 { 
 
-  "name": "POMR web app", 
+  "name": "POMR", 
 
   "short_name": "POMR", 
 
   "start_url": "https://pomrtest.github.io/", 
 
-  "display": "fullscreen", 
+  "display": "standalone", 
 
   "icons": [{ 
 
