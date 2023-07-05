@@ -1,9 +1,0 @@
-{
-    "fullscreen_on_video": true,
-    "push_notifications": false,
-    "email_notifications":
-    {"on": false,
-    "email": ""
-    },
-    "splash": true,
-}
