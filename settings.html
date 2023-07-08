@@ -221,6 +221,15 @@
     
     </style>
 
+    <script>
+        if(navigator.cookieEnabled){
+            pass;
+        } else{
+            alert("Cookies are disabled! Go to your browser settings and turn them on to change settings.");
+            history.back();
+        }
+    </script>
+
     <body>
         <div id="sidebar">
             
