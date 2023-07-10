@@ -199,8 +199,8 @@
         }
 
         @keyframes sideslide{
-            from{left: -25%; filter: blur(10px);}
-            to{left: 0%; filter: blur(0px);}
+            from{left: -25%; filter: blur(10px); opacity: 0;}
+            to{left: 0%; filter: blur(0px); opacity: 1;}
         }
         
         div#sidebar a{
@@ -221,7 +221,7 @@
 
         @media (max-width: 700px){
             div#sidebar{
-            width: 100% !important;
+                width: 100% !important;
         }
 
         }
