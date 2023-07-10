@@ -228,6 +228,10 @@
             alert("Cookies are disabled! Go to your browser settings and turn them on to change settings.");
             history.back();
         }
+        
+        @media screen { #sidebar { width: 25%; } } //desktops/laptops
+
+        @media handheld { #sidebar { width: 100%; } } //mobile devices
     </script>
 
     <body>
