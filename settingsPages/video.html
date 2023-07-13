@@ -1,0 +1,32 @@
+<head>
+    <title>POMR - Settings - video</title>
+</head>
+
+<style>
+        *{
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+        }
+
+        @keyframes loaded{
+            from{
+                filter: blur(10px);
+            }
+            to{
+                filter: blur(0px);
+            }
+        }
+
+        html{
+            animation-name: loaded;
+            animation-duration: 0.6s;
+            animation-delay: 0s;
+            animation-fill-mode:forwards;
+        }
+</style>
+
+<body>
+    <h1>Video</h1>
+    <p>Change the look & feel of POMR.</p>
+    <label for="autoplay">Autoplay on load </label><input id="autoplay" type="checkbox">
+</body>
