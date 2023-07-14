@@ -32,5 +32,5 @@
 
 <body>
     <h1>Notifications</h1>
-    <button style="color: #000000; !important" onclick='new Notification("test");'>Test Notifications</button>
+    <button style="color: #000000; !important" onclick='Notification.requestPermission(); new Notification('test', {body:'This body is also a test, but i feel like you already knew that.',})'>Test Notifications</button>
 </body>
