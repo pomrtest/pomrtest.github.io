@@ -27,7 +27,12 @@
 
 <script>
     function testNotify() {
-        if (!("Notification" in window)) {
+       
+</script>
+
+<body>
+    <h1>Notifications</h1>
+    <button style="color: #000000; !important" onclick=" if (!("Notification" in window)) {
             // Check if the browser supports notifications
             alert("This browser does not support notifications.");
         } else if (Notification.permission === "granted") {
@@ -36,10 +41,5 @@
         } else if (Notification.permission !== "denied") {
             alert("You need to allow notifications to test notifications.");
         }
-    }
-</script>
-
-<body>
-    <h1>Notifications</h1>
-    <button style="color: #000000; !important" onclick="testNotify()">Test Notifications</button>
+    };">Test Notifications</button>
 </body>
