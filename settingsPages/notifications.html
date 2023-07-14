@@ -25,7 +25,21 @@
         }
 </style>
 
+<script>
+    function testNotify() {
+        if (!("Notification" in window)) {
+            // Check if the browser supports notifications
+            alert("This browser does not support notifications.");
+        } else if (Notification.permission === "granted") {
+            const notification = new Notification("This is how notifications look!" {body: "This text is also a notification test, but I feel like you already knew that.", vibrate: [200, 300, 100, 300, 10],});
+        // …
+        } else if (Notification.permission !== "denied") {
+            alert("You need to allow notifications to test notifications.");
+        }
+    }
+</script>
+
 <body>
     <h1>Notifications</h1>
-    <input type="checkbox">
+    <button style="color: #000000; !important" onclick=""testNotify()>Test Notifications</button>
 </body>
