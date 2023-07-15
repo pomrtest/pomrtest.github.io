@@ -3,7 +3,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap" rel="stylesheet">
-    
+
     <title>POMR - Settings - Notifications</title>
 </head>
 
@@ -36,6 +36,16 @@
 <body>
     <h1>Notifications</h1>
     <button style="color: #000000; !important" onclick="Notification.requestPermission(); new Notification('Test notification', {body:'This is a test notification, but Im sure you already knew that.', icon:'./icons/Frame 107.png'});">Test Notifications</button>
-    <h2>Notify me of:</h2>
-    <input type="checkbox">
+    <h2 style="font-weight: 500;">Notify me of:</h2>
+    
+    <label for="notify.episode">Followed show with new Episodes</label><input type="checkbox" id="notify.episode">
+    <label for="notify.movies">Followed account with new Movies</label><input type="checkbox" id="notify.movies">
+    <label for="notify.post">Followed account with new Post</label><input type="checkbox" id="notify.post">
+    
+    <p> </p>
+    
+    <label for="notify.featured">Put on featured</label><input type="checkbox" id="notify.featured">
+    <label for="notify.acc.followed">Account Followed</label><input type="checkbox" id="notify.acc.followed">
+    <label for="notify.show.followed">Show Followed</label><input type="checkbox" id="notify.show.followed">
+    <label for="notify.likes">Likes</label><input type="checkbox" id="notify.likes">
 </body>
