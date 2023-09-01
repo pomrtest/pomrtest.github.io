@@ -157,25 +157,17 @@
         
         div#sidebar{
             background-color: var(--primary-color);
-            width: 10px;
+            width: 25%;
             height: 100%;
-            left: 0px;
+            left: -25%;
             top: 0px;
             position: fixed;
             color: var(--default-text);
             transition-duration: 0.3s;
         }
         
-        div#sidebar:hover{
-            background-color: var(--primary-color);
-            width: 25%;
-            height: 100%;
-            left: 0px;
-            top: 0px;
-            position: fixed;
-            color: var(--default-text);
-            transition-duration: 0.3s;
-        }
+        
+
     div#banner{
 		background-color: var(--primary-color);
         width: 100%;
@@ -193,6 +185,8 @@
     </style>
 
     <script>
+        var sidebar = document.getElementById("sidebar");
+
         document.cookie = "timesHere=0";
 
         document.cookie = "timesHere=timesHere+0";
@@ -219,10 +213,14 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
 
 	    //Copied from google.
+
+        addEventListener("keydown", (event) => {});
+
+        onkeydown = (event) => {sidebar.style.left = sidebar.offsetLeft + 1 + "px"; };
     </script>
 
     <body>
-	<a href="/settings.html">settings</a>
+	<a href="/settings">settings</a>
         
         <h1>Welcome Back!</h1>
         <h2>Favorited</h2>
@@ -264,7 +262,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
             <div class="title"></div>
             <div class="title"></div>
             <div class="more-shows"></div>
-
         </div>
         
         <a href="#">Popular</a>
@@ -275,7 +272,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
             <div class="title"></div>
             <div class="title"></div>
             <div class="title"></div>
-
         </div>
         
         <a href="#GotW">Genre of the Week</a>
@@ -287,7 +283,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
             <div class="title"></div>
             <div class="title"></div>
             <div class="title"></div>
-
         </div>
     </body>
 </head>
