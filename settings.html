@@ -218,8 +218,8 @@
             transition: 0.7s;
         }
         
-        div#sidebar a:hover{
-            background-color: var(--default-text);
+        div#sidebar a:active{
+            background-color: var(--secondary-color);
             color: var(--bg);
             text-decoration: none;
             border-radius: 1000px;
@@ -267,9 +267,9 @@
         <div id="sidebar">
             
             <center>
-                <a onclick="document.getElementById('settingsPage').setAttribute('src', '/settingsPages/video.html');" style="cursor: pointer;"><h3>VIDEO</h3></a>
-                <a onclick="document.getElementById('settingsPage').setAttribute('src', '/settingsPages/notifications.html');" style="cursor: pointer;"><h3>NOTIFICATIONS</h3></a>
-                <a onclick="document.getElementById('settingsPage').setAttribute('src', '/settingsPages/badges.html');" style="cursor: pointer;"><h3>BADGES</h3></a>
+                <a onclick="document.getElementById('settingsPage').setAttribute('src', '/settingsPages/video.html');" style="cursor: pointer;">VIDEO<</a>
+                <a onclick="document.getElementById('settingsPage').setAttribute('src', '/settingsPages/notifications.html');" style="cursor: pointer;">NOTIFICATIONS</a>
+                <a onclick="document.getElementById('settingsPage').setAttribute('src', '/settingsPages/badges.html');" style="cursor: pointer;">BADGES</a>
             </center>
         </div>
         <iframe id="settingsPage" style="height:100% ;width:100%; border:none;" title="MainSettings" src="/settingsPages/home.html">
