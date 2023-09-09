@@ -132,13 +132,16 @@
             position: follow; 
         }
 
-        .Description-box{
-            background-color: #00000054;
+        .container{
+            background-color: #00000000;
             margin-right: 50px;
             margin-left: 50px;
             border-radius: 5px;
             padding: 25px;
             text-align: center;
+        }
+        .container p{
+            text-align: left;
         }
 
         #Title{
@@ -146,8 +149,8 @@
         }
 
         #watch{
-            width: 100;
-            height: 100;
+            width: 100px;
+            height: 50px;
 
             background-image: linear-gradient(-45deg, #71FFDD, #7198FF);
             border-style: none;
@@ -158,17 +161,17 @@
             font-weight: 5000px;
             border-radius: 1000px;
             
-            transition-duration: 0.5s;
+            transition-duration: 0.2s;
         }
 
         #watch:hover{
-            transform: scale(1.3,1.3);
-            transition-duration: 0.5s;
+            transform: scale(1.1,1.1);
+            transition-duration: 0.2s;
         }
 
         #watch:active{
-            transform: scale(1.2,1.2);
-            transition-duration: 0.4s;
+            transform: scale(1.05,1.05);
+            transition-duration: 0.2s;
         }
     </style>
 
@@ -185,15 +188,11 @@
     </script> 
 
     </head><body>
-        <div id="nav">
-            <button onclick="history.back()">back</button>
-            <center></center>
-        </div>
         
-        <div class="Description-box"><h1 id="Title">A Good Title</h1>
-            
-            <p id="Desc">I couldn't think of a good example title name..</p>
-<button id="watch"><svg width="45" height="52" viewBox="0 0 45 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="container">
+            <h1 id="Title">A Good Title</h1>
+            <p id="Desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut etiam sit amet nisl. Lacinia quis vel eros donec ac odio tempor orci dapibus. Pellentesque pulvinar pellentesque habitant morbi. Sapien pellentesque habitant morbi tristique senectus et netus et. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Id velit ut tortor pretium. Amet consectetur adipiscing elit duis. Malesuada proin libero nunc consequat. Tempor orci eu lobortis elementum nibh tellus. Faucibus et molestie ac feugiat. Pellentesque dignissim enim sit amet venenatis urna cursus. Varius morbi enim nunc faucibus. Mattis rhoncus urna neque viverra justo. Id interdum velit laoreet id donec. <strong>AKA:</strong> placeholder text.</p>
+<button id="watch">WATCH</button>
     <path d="M42 20.8039C46 23.1133 46 28.8868 42 31.1962L8.99999 50.2487C4.99999 52.5581 -2.5209e-06 49.6714 -2.319e-06 45.0526L-6.53373e-07 6.94743C-4.51479e-07 2.32863 5 -0.558115 9 1.75129L42 20.8039Z" fill="white"/>
     </svg>
     </button>
