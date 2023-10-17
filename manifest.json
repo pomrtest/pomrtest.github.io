@@ -8,14 +8,29 @@
 
   "display": "standalone", 
 
-  "icons": [{ 
-
+  "icons": [
+    { 
     "src": "icons/ios.png", 
-
     "sizes": "512x512", 
-
     "type": "image/png" 
+  }
+] 
 
-  }] 
+  "shortcuts" : [
+    {
+      "name": "Movies",
+      "url": "/movies",
+      "description": "Every movie."
+    },
+    {
+      "name": "Shows",
+      "url": "/shows",
+      "description": "Every show."
+    },
+    {
+      "name": "Upload",
+      "url": "/upload"
+    }
+  ]
 
 }
