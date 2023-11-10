@@ -9,5 +9,10 @@
       "sizes": "512x512",
       "type": "image/png"
     }
+    {
+      "src": "icons/Frame 107.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ] 
 }
