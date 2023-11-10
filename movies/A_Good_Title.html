@@ -150,6 +150,7 @@
         .containerContainer{
             display: grid;
             grid-template-columns: auto auto;
+            grid-template-rows: none;
         }
 
         .int-container{
@@ -195,8 +196,11 @@
         }
 
         @media (max-width: 890px) {
-          #container {
-            background-color: lightblue;
+        .containerContainer{
+            display: grid;
+            grid-template-columns: none;
+            grid-template-rows: auto auto;
+        }
           }
 }
     </style>
@@ -207,7 +211,7 @@
     </script> 
 
     </head><body>
-        <img src="../Assets/placeholder/POMR PHBANNER.png" style="height: 200px; width: 100%; object-fit: none;">
+        <img src="../Assets/placeholder/POMR PHBANNER.png" style="height: auto; width: 100%; object-fit: cover;">
         <div class="containerContainer">
             <div class="container">
                 <h1 id="Title" style="margin-bottom: 10px;">A Good Title</h1>
