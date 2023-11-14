@@ -182,6 +182,17 @@
     div#banner.special{
 		background-image: var(--pomr-gradient);
     }
+
+	    @keyframes unload{
+		    from{
+			    opacity: 1;
+			    top: 0px;
+		    }
+		    to{
+			    opacity: 0;
+			    top: 20px
+		    }
+	    }
     </style>
 
     <script>
@@ -217,14 +228,23 @@ window.addEventListener('beforeinstallprompt', (e) => {
         addEventListener("keydown", (event) => {});
 
         onkeydown = (event) => {sidebar.style.left = sidebar.offsetLeft + 1 + "px"; };
+
+	    function redirect(where){
+		    document.getElementById("page").style.animation = "unload 0.5s";
+		    if where = "movies"
+			setTimeout(go("movies"), milliseconds)    
+	    }
+	    function go(place){
+		    window.location.href = "http://www.w3schools.com";
+	    }
     </script>
 
-    <body style="padding-top: 50px; top: 0px;">
+    <body style="padding-top: 50px; top: 0px;" id="page">
         <div style="background-color: var(--primary-color); position: fixed; top: 0px; left: 0px; width: 100%; height: 50px; column-count: 3; line-height: 50px; padding-left:15px; padding-right:15px; overflow: scroll; z-index: 1000; text-decoration: none;">
     <a href="/home" style="font-weight: bold;">POMR</a>
     <div style="text-align: center; width: 100%;">
-        <a href="/movies">Movies</a> 
-        <a href="/shows">Shows</a>
+        <a href="#movies" onclick="redirect('movies')">Movies</a> 
+        <a href="#shows">Shows</a>
     </div>
     <div style="text-align: right; width: 94%;">
         <a href="/settings">Settings</a> 
