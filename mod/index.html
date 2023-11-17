@@ -101,33 +101,29 @@
             color: #ffffff;
         }
 
-        div#action-list{
-            overflow: scroll;
-            display: grid;
-            gap: 10px;
-            grid-column: 3;
-            grid-row: 2;
-            grid-template-columns: 302px 302px 302px;
-            grid-template-rows: auto auto;
-        }
+        div#action-list {
+    overflow: scroll;
+    display: grid;
+    gap: 10px;
+    grid-column: 3;
+    grid-row: 2;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto;
+}
 
         h2{
             font-weight: 400;
         }
 
-        div.action{
-            width: 302px;
-            height: 188px;
-
-            background-color: var(--primary-color);
-            color: #ffffff00;
-
-            border-radius: 10px;
-            transition: 0.4s;
-        }
+        div.action {
+    height: 188px;
+    background-color: var(--primary-color);
+    color: #ffffff00;
+    border-radius: 10px;
+    transition: 0.4s;
+}
 
         div.action:hover{
-            width: 302px;
             height: 188px;
 
             background-color: var(--secondary-color);
