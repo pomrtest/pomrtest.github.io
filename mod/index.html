@@ -229,11 +229,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
         onkeydown = (event) => {sidebar.style.left = sidebar.offsetLeft + 1 + "px"; };
 
-	    function redirect(where){
-		    document.getElementById("page").style.animation = "unload 0.5s";
-		    if where = "movies"
-			setTimeout(go("movies"), milliseconds)    
-	    }
 	    function go(place){
 		    window.location.href = "http://www.w3schools.com";
 	    }
