@@ -101,20 +101,21 @@
             color: #ffffff;
         }
 
-        div#movielist{
+        div#action-list{
             overflow: scroll;
             display: grid;
             gap: 5px;
-            grid-column: 1;
-            grid-row: 7;
-            grid-template-columns: 302px 302px 302px 302px 302px 302px 302px;
+            grid-column: 3;
+            grid-row: 2;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
         }
 
         h2{
             font-weight: 400;
         }
 
-        div.title{
+        div.action{
             width: 302px;
             height: 188px;
 
@@ -125,7 +126,7 @@
             transition: 0.4s;
         }
 
-        div.title:hover{
+        div.action:hover{
             width: 302px;
             height: 188px;
 
@@ -138,7 +139,7 @@
             transition: 0.2s;
         }
 
-        div.title:focus{
+        div.action:focus{
             width: 302px;
             height: 188px;
 
@@ -151,7 +152,7 @@
             transition: 0.2s;
         }
 
-        div.title a{
+        div.action a{
             padding: 50%;
         }
         
@@ -240,7 +241,15 @@ window.addEventListener('beforeinstallprompt', (e) => {
 </div>
         
         <h1>Mod page.</h1>
-        
+        <div id="action-list">
+            <div class="action" title="Block Account Creation" style="background-image: none; background-size: 302px 188px;"> <a href="./movies/A_Good_Title">Block Acc Creation</a> </div>
+            <div class="action"></div>
+            <div class="action"></div>
+            <div class="action"></div>
+            <div class="action"></div>
+            <div class="action"></div>
+
+        </div>
     </body>
 </head>
 </html>
