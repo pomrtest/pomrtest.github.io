@@ -1,0 +1,232 @@
+<html>
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap" rel="stylesheet">
+
+    <meta name="apple-mobile-web-app-title" content="POMR">
+    <meta name="author" content="POMR">
+        <meta property="og:site_name" content="Homepage">
+		<meta name="description" content="POMR is an app where you can upload and watch user-made shows & movies">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="POMR">
+		<meta name="apple-mobile-web-app-title" content="POMR">
+		<meta name="theme-color" content="#5546AE">
+		<meta name="msapplication-navbutton-color" content="#FFFFFF">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <link rel="manifest" href="/manifest.json">
+
+    <title>POMR - Home</title>
+    <link rel="icon" type="image/x-icon" href="/icons/Frame 107.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        :root {
+            --pomr-gradient: linear-gradient(-50deg, #9656FF, #307DC4);
+            --default-text: #FFFFFF;
+            --bg: #171E35;
+            --primary-color: #5546AE;
+            --secondary-color: #FF6E00;
+        }
+        
+        *{
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+        }
+
+        
+        body{
+            background-color: var(--bg);
+            margin: 10px;
+            animation-name: splashAppearMainPage;
+            animation-duration: 0.6s;
+            animation-delay: 0s;
+            animation-fill-mode: forwards;
+        }
+
+        h0{
+            font-size: 100px;
+            font-weight: 900;
+        }
+
+        div#splash{
+            width: 50%;
+            height: 100%;
+
+            background-image: var(--pomr-gradient);
+            background-repeat: no-repeat;
+
+            text-align: center;
+            padding: 25%;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+
+            animation-name: splashFade;
+            animation-duration: 0.6s;
+            animation-delay: 0.4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes splashFade{
+            from{
+                opacity: 1;
+                filter: blur(0px);
+                background-position-y: 0px;
+            }
+            to{
+                opacity: 0;
+                filter: blur(10px);
+                background-position-y: 70rem;
+            }
+        }
+
+        @keyframes splashAppearMainPage{
+            from{
+                background-color: #000000;
+                margin: 10px;
+                opacity: 0;
+            }
+            to{
+                background-color: var(--bg);
+                margin: 5px;
+                opacity: 1;
+            }
+        }
+
+        .splashtitle{
+            color: #ffffff;
+        }
+
+        div#movielist{
+            overflow: scroll;
+            display: grid;
+            gap: 5px;
+            grid-column: 1;
+            grid-row: 7;
+            grid-template-columns: 302px 302px 302px 302px 302px 302px 302px;
+        }
+
+        h2{
+            font-weight: 400;
+        }
+
+        div.title{
+            width: 302px;
+            height: 188px;
+
+            background-color: var(--primary-color);
+            color: #ffffff00;
+
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        div.title:hover{
+            width: 302px;
+            height: 188px;
+
+            background-color: var(--secondary-color);
+            color: #ffffff;
+
+            border-radius: 10px;
+
+            transform: scale(0.972,0.972);;
+            transition: 0.2s;
+        }
+
+        div.title:focus{
+            width: 302px;
+            height: 188px;
+
+            background-color: #d4e8ff;
+            color: #ffffffff;
+
+            border-radius: 10px;
+
+            transform: scale(1,1);
+            transition: 0.2s;
+        }
+
+        div.title a{
+            padding: 50%;
+        }
+        
+        div#sidebar{
+            background-color: var(--primary-color);
+            width: 25%;
+            height: 100%;
+            left: -25%;
+            top: 0px;
+            position: fixed;
+            color: var(--default-text);
+            transition-duration: 0.3s;
+        }
+        
+        
+
+    div#banner{
+		background-color: var(--primary-color);
+        width: 100%;
+        height: 50px;
+        
+    }
+
+	div#banner.important{
+		background-color: var(--secondary-color);
+    }
+
+    div#banner.special{
+		background-image: var(--pomr-gradient);
+    }
+
+	    @keyframes unload{
+		    from{
+			    opacity: 1;
+			    top: 0px;
+		    }
+		    to{
+			    opacity: 0;
+			    top: 20px
+		    }
+	    }
+    </style>
+
+    <script>
+        var sidebar = document.getElementById("sidebar");
+
+        document.cookie = "timesHere=0";
+
+        document.cookie = "timesHere=timesHere+0";
+
+        const splashScreen = document.getElementById("splash");
+
+        setTimeout(removeSplashScreen, 1500);
+           
+        function removeSplashScreen(){
+            document.getElementById("splash").remove();
+        }
+    </script>
+
+    <body style="padding-top: 50px; top: 0px;" id="page">
+        <div style="background-color: var(--primary-color); position: fixed; top: 0px; left: 0px; width: 100%; height: 50px; column-count: 3; line-height: 50px; padding-left:15px; padding-right:15px; overflow: scroll; z-index: 1000; text-decoration: none;">
+    <a href="/home" style="font-weight: bold;">POMR</a>
+    <div style="text-align: center; width: 100%;">
+        <a href="#movies" onclick="document.getElementById('page').style.animation = 'unload 0.5s';
+        setTimeout(window.location.href = '/movies'
+        , 50)">Movies</a> 
+        <a href="shows">Shows</a>
+    </div>
+    <div style="text-align: right; width: 94%;">
+        <a href="/settings">Settings</a> 
+        <a href="/login">Login</a>
+    </div>
+</div>
+	    
+	<iframe href="settingsPages/home.html"></iframe>
+    </body>
+</head>
+</html>
