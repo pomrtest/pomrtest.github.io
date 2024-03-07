@@ -27,7 +27,7 @@
         :root {
             --pomr-gradient: linear-gradient(-50deg, #9656FF, #307DC4);
             --default-text: #FFFFFF;
-            --bg: #171E35;
+            --bg: rgba(0, 0, 0, 0);
             --primary-color: #5546AE;
             --secondary-color: #FF6E00;
         }
@@ -209,23 +209,102 @@
         function removeSplashScreen(){
             document.getElementById("splash").remove();
         }
+	    // Initialize deferredPrompt for use later to show browser install prompt.
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent the mini-infobar from appearing on mobile
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI notify the user they can install the PWA
+  showInstallPromotion();
+  // Optionally, send analytics event that PWA install promo was shown.
+  console.log(`'beforeinstallprompt' event was fired.`);
+});
+
+	    //Copied from google.
+
+        addEventListener("keydown", (event) => {});
+
+        onkeydown = (event) => {sidebar.style.left = sidebar.offsetLeft + 1 + "px"; };
+
+	    function redirect(where){
+		    document.getElementById("page").style.animation = "unload 0.5s";
+		    if where = "movies"
+			setTimeout(go("movies"), milliseconds)    
+	    }
+	    function go(place){
+		    window.location.href = "http://www.w3schools.com";
+	    }
     </script>
 
     <body style="padding-top: 50px; top: 0px;" id="page">
-        <div style="background-color: var(--primary-color); position: fixed; top: 0px; left: 0px; width: 100%; height: 50px; column-count: 3; line-height: 50px; padding-left:15px; padding-right:15px; overflow: scroll; z-index: 1000; text-decoration: none;">
-
-    <a href="#home" style="font-weight: bold;" onclick="document.getElementById('frame').setAttribute('src', '/homeextract.html');">POMR</a>
-    <div style="text-align: center; width: 100%;">
-        <a href="#movies" onclick="document.getElementById('frame').setAttribute('src', '/movies/');">Movies</a> 
-        <a href="#shows" onclick="document.getElementById('frame').setAttribute('src', '/shows/');">Shows</a>
-    </div>
-    <div style="text-align: right; width: 94%;">
-        <a href="#settings" onclick="document.getElementById('frame').setAttribute('src', '/settings.html');">Settings</a> 
-        <a href="#login" onclick="document.getElementById('frame').setAttribute('src', '/login.html');">Login</a>
-    </div>
-</div>
 	    
-	<iframe src="/settingsPages/notifications.html" style="border: #FFFFFF; border-style: none; width: 100%; height: 100%; margin:0px; padding: 0px;" id="frame"></iframe>
+	<a href="/settings">settings</a>
+        
+        <h1>Welcome Back!</h1>
+        <h2>Favorited</h2>
+        <div id="sidebar"></div>
+        <div id="movielist">
+            <div class="title" style="background-image: url('./Assets/404.png'); background-size: 302px 188px;"> <a href="./movies/A_Good_Title"> </a> </div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+
+        </div>
+        
+        <h1> </h1>
+        <h1> </h1>
+
+        <a href="/all-movies">Movies</a>
+        <div id="movielist">
+            <div class="title"> <a href="./movies/A_Good_Title"> </a> </div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="more-movies"></div>
+
+        </div>
+        
+        <h1> </h1>
+        <h1> </h1>
+
+        <a href="/all-shows">Shows</a>
+        <div id="movielist">
+            <div class="title"> <a href="./shows/A_Good_Show.html"> </a> </div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="more-shows"></div>
+        </div>
+        
+        <a href="#">Popular</a>
+        <div id="movielist">
+            <div class="title"> <a href="./movies/A_Good_Title"> </a> </div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+        </div>
+        
+        <a href="#GotW">Genre of the Week</a>
+        <a href="#">Genre</a>
+        <div id="movielist">
+            <div class="title"> <a href="./movies/A_Good_Title"> </a> </div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+            <div class="title"></div>
+        </div>
     </body>
 </head>
 </html>
