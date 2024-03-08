@@ -209,19 +209,26 @@
         function removeSplashScreen(){
             document.getElementById("splash").remove();
         }
+
+        function changeiFrame(){
+            url = url.split('#'); //url = ["pomrtest.github.io/home2","/settings"]
+            url = url.pop();      //url = "/settings"
+            return url;           //return "/settings"
+            document.getElementById('frame').setAttribute('src', url);
+        }
     </script>
 
     <body style="padding-top: 50px; top: 0px; margin: 0px;" id="page">
         <div style="background-color: var(--primary-color); position: fixed; top: 0px; left: 0px; width: 100%; height: 50px; column-count: 3; line-height: 50px; padding-left:15px; padding-right:15px; overflow: scroll; z-index: 1000; text-decoration: none;">
 
-    <a href="#home" style="font-weight: bold;" onclick="document.getElementById('frame').setAttribute('src', '/homeextract.html');">POMR</a>
+    <a href="#home" style="font-weight: bold;" onclick="">POMR</a>
     <div style="text-align: center; width: 100%;">
-        <a href="#movies" onclick="document.getElementById('frame').setAttribute('src', '/movies/');">Movies</a> 
-        <a href="#shows" onclick="document.getElementById('frame').setAttribute('src', '/shows/');">Shows</a>
+        <a href="#movies" onclick="">Movies</a> 
+        <a href="#shows" onclick="">Shows</a>
     </div>
     <div style="text-align: right; width: 94%;">
-        <a href="#settings" onclick="document.getElementById('frame').setAttribute('src', '/settings.html');">Settings</a> 
-        <a href="#login" onclick="document.getElementById('frame').setAttribute('src', '/login.html');">Login</a>
+        <a href="#settings" onclick="">Settings</a> 
+        <a href="#login" onclick="">Login</a>
     </div>
 </div>
 	    
