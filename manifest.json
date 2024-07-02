@@ -4,15 +4,10 @@
   "start_url": "https://pomrtest.github.io/",
   "display": "standalone",
   "icons": [
-    {
-      "src": "icons/ios.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-    {
-      "src": "icons/Frame 107.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ] 
+      {
+          "src": "icons/ios.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ]
 }

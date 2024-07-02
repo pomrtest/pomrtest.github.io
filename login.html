@@ -1,5 +1,4 @@
 <head>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap" rel="stylesheet">
@@ -153,11 +152,15 @@
 
     
 
-    <body style="display: flex;  justify-content: center; margin: 50px;">
-       <div style="width: 75%; background-color: #ffffff55; border-radius: 10px; padding: 10px;">
-           <h1>Log In</h1>
-           <input type="text" placeholder="Username">
-           <input type="text" placeholder="Password">
+    <body style="display: flex;  justify-content: center;  margin: 20px;">
+       <div style="width: 100vw; background-color: #171E35; border-radius: 5px; padding: 10px;">
+         <form action="./server/login.php" method="POST">
+            <h1>Log In</h1>
+            <input type="text" placeholder="Username" id="username" autocomplete="username">
+            <input type="text" placeholder="Key" id="passkey" autocomplete="current-password">
+            <input type="submit" id="submit">
+        </form>
+           
     </div>
 </body>
 </head>

@@ -1,0 +1,41 @@
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap" rel="stylesheet">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="POMR">
+    
+    <link rel="manifest" href="/manifest.json">
+
+
+
+    <title>Token Gen Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+function createRandomString(length) {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
+}
+do {
+    Document.getElementById("lenLabel").innerHTML = String(document.getElementById('length').value);
+} while (5 = 5);
+    </script>
+
+    
+
+    <body>
+        <button onclick="alert(createRandomString(  document.getElementById('length').value  ))">
+            Make String
+        </button>
+        <input type="range" id="length" name="length" min="3" max="20">
+        <label for="length" id="lenLabel">value</label>
+    </body>
+</head>
