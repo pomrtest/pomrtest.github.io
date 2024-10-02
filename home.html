@@ -171,7 +171,8 @@
     div#banner{
 	background-color: var(--primary-color);
         width: 100vw;
-        height: 40px;
+        height: fit-content;
+	min-height: 40px;
 	    
 	text-align: center;
     	line-height: 40px;
@@ -258,7 +259,8 @@ window.addEventListener('beforeinstallprompt', (e) => {
         <a href="/login">Login</a>
     </div>
 </div>
-	<div id="banner" class="special">POMR has started developing servers. This website will not be updated until finished.</div>
+	<div id="banner" class="special">POMR has started developing servers.</div>
+	<div id="banner" class="important">POMR Will no longer be on github pages after server update! This is because of github's lack of PHP support. POMR will still be open source and will stay on github.</div>
 	<a href="/settings">settings</a>
         
         <h1>Welcome Back!</h1>
